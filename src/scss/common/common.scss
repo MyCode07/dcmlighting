@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+
+    font-style: normal;
+    letter-spacing: normal;
+    font-family: Onest;
+
+    color: $black;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+
+    background-color: $white;
+
+    &._noscroll {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+._container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: $container + px;
+
+    @media (max-width: $containerWithPadding + px) {
+        max-width: none;
+        padding-inline: $padding + px;
+    }
+}
+
+img,
+svg,
+picture,
+figure {
+    max-width: 100%;
+    height: auto;
+}
+
+[data-tab-content] {
+    &:not(._active) {
+        display: none;
+    }
+}
+
+._btn {
+    height: 60px;
+    padding: 16px 10px;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    border-radius: 8px;
+    background-color: $accent;
+
+    transition: all 0.3s ease 0s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $accent_hover;
+        }
+    }
+}
