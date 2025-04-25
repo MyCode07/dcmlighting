@@ -1,0 +1,230 @@
+.cats-item {
+    border-radius: 8px;
+    padding: 16px;
+    background: $bgc;
+
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+
+    position: relative;
+    overflow: hidden;
+    min-height: 60px;
+
+    @media (max-width:768px) {
+        padding: 12px;
+    }
+
+    @media (max-width:425px) {
+        justify-content: center;
+    }
+
+    h3 {
+        position: relative;
+        z-index: 1;
+        font-weight: 600;
+        line-height: 1.45;
+
+        @media (max-width:768px) {
+            font-size: 15px;
+        }
+    }
+
+    img,
+    picture {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    div {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: $accent;
+        transition: all 0.3s ease 0s;
+        border: 1px solid transparent;
+
+        svg {
+            fill: $black;
+        }
+
+        @media (max-width:425px) {
+            display: none;
+        }
+
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            div {
+                border-color: $accent_hover;
+                background-color: $accent_hover;
+            }
+        }
+
+    }
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+
+    // .product-item__img
+
+    &__img {
+        position: relative;
+        padding-bottom: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 16px;
+
+        @media (max-width:768px) {
+            margin-bottom: 8px;
+        }
+
+        img,
+        picture {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        display: block;
+        margin-bottom: 8px;
+
+        @media (max-width:768px) {
+            font-size: 15px;
+            line-height: 1.45;
+        }
+    }
+
+    span {
+        color: $soft_grey;
+        line-height: 1.4;
+        display: block;
+        margin-bottom: 16px;
+
+        @media (max-width:768px) {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    }
+
+    // .product-item__actions
+
+    &__actions {
+        display: flex;
+        gap: 8px;
+
+        * {
+            width: fit-content;
+        }
+
+        @media (max-width:600px) {
+            flex-direction: column;
+            gap: 4px;
+
+            * {
+                width: 100%;
+            }
+        }
+
+
+    }
+}
+
+.advantages-item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    background-color: $bgc;
+    border-radius: 16px;
+    padding: 16px;
+
+    @media (max-width:425px) {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 16px;
+        border-radius: 8px;
+    }
+
+    h5 {
+        margin-bottom: 8px;
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+
+        @media (max-width:768px) {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+    }
+
+    p {
+        color: $grey;
+        line-height: 1.4;
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+    }
+
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $white;
+
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
+        border-radius: 8px;
+
+        img,
+        svg,
+        picture {
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+
+
+    &._accent-bgc {
+        background-color: $accent;
+
+        p {
+            color: $soft_grey;
+        }
+
+        span {
+            background-color: $accent_hover;
+        }
+    }
+}

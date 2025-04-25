@@ -94,50 +94,22 @@
             }
         }
 
-        ol {
-            margin-top: 16px;
 
-            display: flex;
-            align-items: center;
-            gap: 8px;
+    }
+
+    ol {
+        margin-top: 16px;
+
+        @media (max-width:768px) {
+            margin-top: 24px;
+            gap: 5px;
+        }
+
+        li {
+            border-radius: 200px;
 
             @media (max-width:768px) {
-                margin-top: 24px;
-                flex-direction: column;
-                gap: 5px;
-                align-items: flex-start;
-            }
-
-            li {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 1.4;
-
-                padding: 8px 12px 8px 10px;
-                border-radius: 100px;
-                background-color: $white;
-
-                @media (max-width:768px) {
-                    padding: 8px 10px 8px 8px;
-                    background-color: #F6F6F6;
-                    font-size: 12px;
-                }
-
-                img,
-                svg {
-                    width: 28px;
-                    height: 28px;
-                    flex: 0 0 auto;
-
-                    @media (max-width:768px) {
-                        width: 20px;
-                        height: 20px;
-                    }
-                }
+                font-size: 12px;
             }
         }
     }

@@ -1,8 +1,11 @@
 // import { maskInputs } from "./static/inputmask.js";
 // import "./parts/menu.js";
 // import "./parts/popup.js";
-// import "./parts/sliders.js";
+import "./parts/sliders.js";
 // import "./parts/tabs.js";
+import { accorden } from "./static/accordeon.js";
+
+accorden();
 
 // maskInputs('+7 (999) 999-99-99', '._mask-phone')
 

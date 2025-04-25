@@ -25,10 +25,10 @@
                             <div class="form__item">
                                 <input type="text" placeholder="+7977977977">
                             </div>
-                            <button class="_btn">Отправить</button>
+                            <button class="_btn _btn-accent">Отправить</button>
                         </div>
                     </div>
-                    <ol>
+                    <ol class="_icon-list">
                         <li>
                             <img src="img/icons/box.svg" alt="">
                             <span>Отправка день в день</span>
@@ -50,7 +50,463 @@
         </div>
     </section>
 
+    <section class="section cats">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Наша продукция</h2>
+                </div>
 
+                @@include('html/parts/cats.html',{})
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="cta-content">
+                    <div>
+                        <h2>Попробуйте <br> перед покупкой!</h2>
+                        <p>Заполните форму и получите возможность протестировать продукцию перед покупкой. Убедитесь в
+                            качестве лично! <br>
+                            Это просто, быстро и ни к чему не обязывает!</p>
+                    </div>
+                    <div class="form">
+                        <div class="form__row">
+                            <div class="form__item">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="form__item">
+                                <input type="text" placeholder="+7977977977">
+                            </div>
+                            <button class="_btn _btn-accent">Отправить</button>
+                        </div>
+                        <label>Нажимая на кнопку, вы даете свое согласие на обработку персональных данных в соответствии
+                            с политикой конфиденциальности</label>
+                    </div>
+                </div>
+                <div class="cta-img">
+                    <img src="img/cta1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section products">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Часто покупаемые <br> комплектующие по России</h2>
+
+                    <div>
+                        <img src="img/icons/attention.svg" alt="">
+                        <p>В каталоге указаны оптовые цены. Возможна розничная покупка — наценка от 30%. Для заявки
+                            добавьте товар в корзину и
+                            отметьте галочкой пункт «Мне нужен товар в розницу»</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-4">
+                    @@include('html/parts/product.html',{})
+                    @@include('html/parts/product.html',{})
+                    @@include('html/parts/product.html',{})
+                    @@include('html/parts/product.html',{})
+                    @@include('html/parts/product.html',{})
+                    @@include('html/parts/product.html',{})
+
+                    <div class="offer">
+                        <p>Получите оптовый прайс-лист на всю продукцию</p>
+                        <button class="_btn _btn-accent ">Отправить</button>
+                        <img src="img/offer.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta _cta-accent">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="cta-content">
+                    <div>
+                        <h2>Подберите идеальное решение для вашего проекта за 1 минуту!</h2>
+                        <p>Уточните данные для заказа и получите скидку 7% на первый заказ+бесплатную доставку*!</p>
+                    </div>
+                    <div class="form">
+                        <div class="form__row">
+                            <div class="form__item">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="form__item">
+                                <input type="text" placeholder="+7977977977">
+                            </div>
+                            <button class="_btn _btn-white">Отправить</button>
+                        </div>
+                        <label>Нажимая на кнопку, вы даете свое согласие на обработку персональных данных в соответствии
+                            с политикой конфиденциальности</label>
+                    </div>
+                </div>
+                <div class="cta-img">
+                    <img src="img/cta2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2>Примеры использования нашей продукции</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dsm">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__flex">
+                    <div class="section__flex-left">
+                        <div>
+                            <h2>ДСМ Освещение – <br> надёжный поставщик светодиодного освещения</h2>
+                            <p>Мы предлагаем <b>сертифицированную продукцию с гарантией</b>, стабильные поставки и
+                                выгодные условия сотрудничества.</p>
+                        </div>
+                        <ol class="_icon-list">
+                            <li>
+                                <img src="img/icons/business.svg" alt="">
+                                <span>Для бизнеса</span>
+                            </li>
+                            <li>
+                                <img src="img/icons/industry.svg" alt="">
+                                <span>Для промышленности</span>
+                            </li>
+                            <li>
+                                <img src="img/icons/government.svg" alt="">
+                                <span>Для государственных учреждений</span>
+                            </li>
+                        </ol>
+                        <button class="_btn _btn-accent ">Получить презентацию</button>
+                    </div>
+                    <div class="section__flex-right">
+                        <video playsinline poster="img/Video.png" muted loop class="_video">
+                            <source src="files/video.mp4" type="video/mp4">
+                        </video>
+                        <button>
+                            <img src="img/icons/play.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section advantages">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Почему мы?</h2>
+                </div>
+
+                <div class="grid grid-4">
+                    <div class="advantages-item _accent-bgc">
+                        <div>
+                            <h5>Скорость работы</h5>
+                            <p>Оперативная отгрузка в день заказа</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-1.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item">
+                        <div>
+                            <h5>Удобство логистики</h5>
+                            <p>Бесплатная доставка по Москве (при заказе от 20 000 рублей)</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-2.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item">
+                        <div>
+                            <h5>Гибкость подхода</h5>
+                            <p>Быстрый и прозрачный процесс обработки рекламаций</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-3.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item">
+                        <div>
+                            <h5>Конкурентная цена</h5>
+                            <p>Доступная стоимость и высокое качества продукции</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-4.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item">
+                        <div>
+                            <h5>Широкий ассортимент</h5>
+                            <p>Большой выбор продукции для любых задач и проектов</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-5.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item">
+                        <div>
+                            <h5>Профессиональная поддержка</h5>
+                            <p>Консультации от экспертов на всех этапах сотрудничества</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-6.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item  _accent-bgc">
+                        <div>
+                            <h5>Гарантия качества</h5>
+                            <p>Вся продукция сертифицирована и соответствует стандартам</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-7.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item ">
+                        <div>
+                            <h5>Индивидуальный подход</h5>
+                            <p>Решения, адаптированные под потребности каждого клиента</p>
+                        </div>
+                        <span>
+                            <img src="img/icons/advantages-8.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section order">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Как оформить заказ</h2>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="accordion" data-accordion data-width="10000">
+                        <div class="accordion__item" data-accordion-item>
+                            <div class="accordion__item-title" data-accordion-title>
+                                <i>1</i>
+                                <h5>Заявка</h5>
+                            </div>
+                            <div class="accordion__item-content" data-accordion-content>
+                                <div class="accordion__item-content-height">
+                                    <div>
+                                        <p>Оставьте заявку на сайте, заполнив простую форму. Укажите свои контактные
+                                            данные и предпочтения по товару или услуге. Мы
+                                            свяжемся с вами в ближайшее время!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__item" data-accordion-item>
+                            <div class="accordion__item-title" data-accordion-title>
+                                <i>2</i>
+                                <h5>Консультация</h5>
+                            </div>
+                            <div class="accordion__item-content" data-accordion-content>
+                                <div class="accordion__item-content-height">
+                                    <div>
+                                        <p>Наш менеджер уточнит детали вашего заказа, ответит на вопросы и поможет
+                                            с выбором. Вы получите профессиональную консультацию и расчет стоимости.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__item" data-accordion-item>
+                            <div class="accordion__item-title" data-accordion-title>
+                                <i>3</i>
+                                <h5>Договор</h5>
+                            </div>
+                            <div class="accordion__item-content" data-accordion-content>
+                                <div class="accordion__item-content-height">
+                                    <div>
+                                        <p>Мы подготовим официальный договор с учетом всех ваших пожеланий. Вы сможете
+                                            проверить условия и подписать документ электронно или в офисе.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__item" data-accordion-item>
+                            <div class="accordion__item-title" data-accordion-title>
+                                <i>4</i>
+                                <h5>Счет</h5>
+                            </div>
+                            <div class="accordion__item-content" data-accordion-content>
+                                <div class="accordion__item-content-height">
+                                    <div>
+                                        <p>После согласования условий мы выставим счет на оплату. Оплатить можно удобным
+                                            для вас способом: банковским переводом или онлайн.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__item" data-accordion-item>
+                            <div class="accordion__item-title" data-accordion-title>
+                                <i>5</i>
+                                <h5>Сборка день в день</h5>
+                            </div>
+                            <div class="accordion__item-content" data-accordion-content>
+                                <div class="accordion__item-content-height">
+                                    <div>
+                                        <p>Ваш заказ будет собран и упакован в день оплаты. Мы тщательно проверяем
+                                            качество и комплектацию, чтобы вы получили именно то, что заказали.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__item" data-open data-accordion-item>
+                            <div class="accordion__item-title" data-accordion-title>
+                                <i>6</i>
+                                <h5>Доставка</h5>
+                            </div>
+                            <div class="accordion__item-content" data-accordion-content>
+                                <div class="accordion__item-content-height">
+                                    <div>
+                                        <p>Мы доставим ваш заказ в удобное время и место. Вы сможете отслеживать статус
+                                            доставки и получите уведомление о прибытии. <br><br> Минимальная сумма
+                                            заказа –
+                                            от 5 000 руб. Доставка до транспортных компаний от 15 000 руб. СДЭК, Мейджик
+                                            Транс.<br><br> Бесплатная доставка по Москве до МКАД от 20 000 руб.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-img">
+                        <img src="img/order.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta cta-montaj _cta-accent">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="cta-content">
+                    <div>
+                        <h2>Поможем с монтажом <br> световой продукции</h2>
+                        <p>Работаем с частными и корпоративными клиентами. Установим гирлянды, неон, ленты и любые
+                            световые элементы — дома, на
+                            участке, в магазине или на фасаде.</p>
+                        <p><b>Монтаж под ключ — от 1 дня. Приезжаем с инструментами, работаем быстро и аккуратно.
+                                Гарантия
+                                на выполненные работы.</b></p>
+                    </div>
+                    <button class="_btn _btn-white">Оставить заявку на монтаж</button>
+                </div>
+                <div class="cta-img">
+                    <img src="img/cata-montaj.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section clients">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Наши клиенты</h2>
+                </div>
+                <div class="clients-slider">
+                    <button class="prev">
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                            <use xlink:href='img/svg/icons.svg#arrow' />
+                        </svg>
+                    </button>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/client.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next">
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                            <use xlink:href='img/svg/icons.svg#arrow' />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Благодарности</h2>
+                </div>
+                <div class="clients-slider">
+                    <button class="prev">
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                            <use xlink:href='img/svg/icons.svg#arrow' />
+                        </svg>
+                    </button>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/review.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/review.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/review.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/review.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/review.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/review.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next">
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                            <use xlink:href='img/svg/icons.svg#arrow' />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 
