@@ -209,6 +209,15 @@ h2 {
     height: 45px;
     flex: 0 0 auto;
 
+    &[disabled] {
+        opacity: 0.5;
+    }
+
+    @media (max-width:768px) {
+        width: 35px;
+        height: 35px;
+    }
+
     img,
     svg {
         width: 20px;
@@ -217,12 +226,130 @@ h2 {
         stroke: $black;
 
         transform: rotate(90deg);
+
+        @media (max-width:768px) {
+            width: 16px;
+            height: 9px;
+        }
     }
 }
 
 .next {
+
     img,
     svg {
         transform: rotate(-90deg);
+    }
+}
+
+.link-big {
+    font-weight: 600;
+    line-height: 140%;
+    display: block;
+
+    margin-bottom: 4px;
+
+    @media (min-width:769px) {
+        @include adaptive-value('font-size', 44, 20, 1);
+    }
+
+    @media (max-width:768px) {
+        font-size: 32px;
+    }
+}
+
+._social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    li {
+        flex: 0 0 auto;
+    }
+
+    a {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background-color: $accent;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img,
+        svg {
+            width: 20px;
+            flex: 0 0 auto;
+            fill: $white;
+        }
+    }
+
+}
+
+.address {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-weight: 600;
+    line-height: 140%;
+
+    @include adaptive-value('font-size', 20, 16, 1);
+
+    @media (max-width:768px) {
+        gap: 12px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+        margin-bottom: 20px;
+    }
+
+
+    span {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background-color: $white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+
+        @media (max-width:768px) {
+            width: 36px;
+            height: 36px;
+        }
+
+        img,
+        svg {
+            width: 50%;
+            flex: 0 0 auto;
+            fill: $accent;
+        }
+    }
+
+    i {
+        font-style: normal;
+
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+
+    // .address-extra
+
+    &-extra {
+        color: #7A7A7A;
+
+        font-size: 15px;
+        line-height: 145%;
+
+        @media (max-width:768px) {
+            font-size: 12px;
+        }
     }
 }
