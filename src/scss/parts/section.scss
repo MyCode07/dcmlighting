@@ -224,6 +224,29 @@
     }
 }
 
+.cases {
+    .section__title {
+        a {
+            padding: 12px 21px;
+            background-color: #f2f2f2;
+            border-radius: 12px;
+            text-align: center;
+
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 120%;
+
+            transition: background-color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $accent;
+                }
+            }
+        }
+    }
+}
+
 .advantages {
     .grid {
         @media (max-width:725px) {
@@ -686,7 +709,6 @@
     }
 }
 
-
 .clients {
     // .clients-slider
 
@@ -1123,6 +1145,53 @@
                     color: $white;
                 }
             }
+        }
+    }
+}
+
+.error {
+    @include adaptive-value('margin-top', 64, 20, 1);
+    
+
+    @media (min-width:769px) {
+        text-align: center;
+    }
+
+    .section__body {
+        max-width: 550px;
+
+        @media (min-width:769px) {
+            margin-inline: auto;
+        }
+    }
+
+    span {
+        @include adaptive-value('font-size', 64, 44, 1);
+        line-height: 125%;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        margin-bottom: 12px;
+        font-weight: 700;
+        line-height: 125%;
+        @include adaptive-value('font-size', 44, 28, 1);
+    }
+
+    p {
+        @include adaptive-value('font-size', 20, 16, 1);
+        line-height: 145%;
+        margin-bottom: 32px;
+    }
+
+    ._btn {
+        width: 100%;
+        max-width: 320px;
+
+        @media (min-width:769px) {
+            margin-inline: auto;
         }
     }
 }

@@ -242,6 +242,49 @@ h2 {
     }
 }
 
+[data-action] * {
+    pointer-events: none;
+}
+
+.breadcrumbs {
+    margin-top: 32px;
+    margin-bottom: 16px;
+
+    @media (max-width:768px) {
+        margin-top: 20px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 145%;
+
+            @media (max-width:768px) {
+                font-size: 14px;
+            }
+
+            a,
+            div {
+                color: $soft_grey;
+            }
+
+            div {
+                flex: 0 0 auto;
+            }
+        }
+    }
+}
+
 .link-big {
     font-weight: 600;
     line-height: 140%;
