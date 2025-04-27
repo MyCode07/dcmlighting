@@ -99,7 +99,7 @@
                 <div class="section__title">
                     <h2>Часто покупаемые <br> комплектующие по России</h2>
 
-                    <div>
+                    <div class="_attention">
                         <img src="img/icons/attention.svg" alt="">
                         <p>В каталоге указаны оптовые цены. Возможна розничная покупка — наценка от 30%. Для заявки
                             добавьте товар в корзину и
@@ -125,34 +125,7 @@
         </div>
     </section>
 
-    <section class="section cta _cta-accent">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="cta-content">
-                    <div>
-                        <h2>Подберите идеальное решение для вашего проекта за 1 минуту!</h2>
-                        <p>Уточните данные для заказа и получите скидку 7% на первый заказ+бесплатную доставку*!</p>
-                    </div>
-                    <div class="form">
-                        <div class="form__row">
-                            <div class="form__item">
-                                <input type="text" placeholder="Имя">
-                            </div>
-                            <div class="form__item">
-                                <input type="text" placeholder="+7977977977">
-                            </div>
-                            <button class="_btn _btn-white">Отправить</button>
-                        </div>
-                        <label>Нажимая на кнопку, вы даете свое согласие на обработку персональных данных в соответствии
-                            с политикой конфиденциальности</label>
-                    </div>
-                </div>
-                <div class="cta-img">
-                    <img src="img/cta2.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/cta-accent.html')
 
     <section class="section cases">
         <div class="section__container _container">
@@ -205,90 +178,7 @@
         </div>
     </section>
 
-    <section class="section advantages">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__title">
-                    <h2>Почему мы?</h2>
-                </div>
-
-                <div class="grid grid-4">
-                    <div class="advantages-item _accent-bgc">
-                        <div>
-                            <h5>Скорость работы</h5>
-                            <p>Оперативная отгрузка в день заказа</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-1.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="advantages-item">
-                        <div>
-                            <h5>Удобство логистики</h5>
-                            <p>Бесплатная доставка по Москве (при заказе от 20 000 рублей)</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-2.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="advantages-item">
-                        <div>
-                            <h5>Гибкость подхода</h5>
-                            <p>Быстрый и прозрачный процесс обработки рекламаций</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-3.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="advantages-item">
-                        <div>
-                            <h5>Конкурентная цена</h5>
-                            <p>Доступная стоимость и высокое качества продукции</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-4.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="advantages-item">
-                        <div>
-                            <h5>Широкий ассортимент</h5>
-                            <p>Большой выбор продукции для любых задач и проектов</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-5.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="advantages-item">
-                        <div>
-                            <h5>Профессиональная поддержка</h5>
-                            <p>Консультации от экспертов на всех этапах сотрудничества</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-6.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="advantages-item  _accent-bgc">
-                        <div>
-                            <h5>Гарантия качества</h5>
-                            <p>Вся продукция сертифицирована и соответствует стандартам</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-7.svg" alt="">
-                        </span>
-                    </div>
-                    <div class="advantages-item ">
-                        <div>
-                            <h5>Индивидуальный подход</h5>
-                            <p>Решения, адаптированные под потребности каждого клиента</p>
-                        </div>
-                        <span>
-                            <img src="img/icons/advantages-8.svg" alt="">
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/advantages.html')
 
     <section class="section order">
         <div class="section__container _container">
@@ -530,208 +420,10 @@
         </div>
     </section>
 
-    <section class="section faq">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__title">
-                    <h2>Ответы на ваши вопросы</h2>
-                    <p>Получите ясность и понимание</p>
-                </div>
 
-                <div class="accordion" data-accordion data-width="10000">
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Подходят ли светодиодные модули для уличного использования?</h5>
-                            <span>
-                                <svg width="20" height="21" viewBox="0 0 20 21">
-                                    <use xlink:href='img/svg/icons.svg#plus' />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Да, большинство наших модулей имеют защиту от влаги и пыли (класс IP65 и выше),
-                                        что делает их идеальными для наружного
-                                        применения.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Можно ли заменить отдельные модули в случае поломки?</h5>
-                            <span></span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Оставьте</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Безопасны ли блоки питания?</h5>
-                            <span></span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Оставьте</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Как монтируется светодиодный неон?</h5>
-                            <span></span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Оставьте</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Есть ли гарантия на вашу продукцию?</h5>
-                            <span></span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Оставьте</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Можно ли заказать индивидуальный дизайн или нестандартные решения?</h5>
-                            <span></span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Оставьте</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Как быстро осуществляется доставка?</h5>
-                            <span></span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Оставьте</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item" data-accordion-item>
-                        <div class="accordion__item-title" data-accordion-title>
-                            <h5>Как оплатить заказ?</h5>
-                            <span></span>
-                        </div>
-                        <div class="accordion__item-content" data-accordion-content>
-                            <div class="accordion__item-content-height">
-                                <div>
-                                    <p>Оставьте</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/faq.html')
 
-    <section class="section footer-form">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="grid grid-2">
-                    <div class="footer-form__contnet">
-                        <a href="" class="logo">
-                            <img src="img/logo.png" alt="">
-                            <span>Светодиодные комплектующие <br> для световой рекламы и освещения</span>
-                        </a>
-
-                        <a href="" class="link-big" target="_blank">+7 991 962-03-071</a>
-                        <a href="mailto:" class="link-big" target="_blank">dcmodule@mail.ru</a>
-                        <ul class="_social">
-                            <li>
-                                <a href="" target="_blank">
-                                    <svg width="20" height="18" viewBox="0 0 20 18">
-                                        <use xlink:href='img/svg/icons.svg#tg' />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" target="_blank">
-                                    <svg width="20" height="20" viewBox="0 0 20 20">
-                                        <use xlink:href='img/svg/icons.svg#wa' />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <a href="" target="_blank" class="address">
-                            <span>
-                                <svg width="16" height="20" viewBox="0 0 16 20">
-                                    <use xlink:href='img/svg/icons.svg#location' />
-                                </svg>
-                            </span>
-                            <p>11399, г. Москва, Электродная 2 с 12-14 подъезд 17
-                                <i>продолжение второй строки</i></p>
-                        </a>
-                        <a href="" target="_blank" class="address">
-                            <span>
-                                <svg width="20" height="20" viewBox="0 0 20 20">
-                                    <use xlink:href='img/svg/icons.svg#time' />
-                                </svg>
-                            </span>
-                            <p>9:00-18:00 (пн-пт)* </p>
-                        </a>
-                        <label class="address-extra">*работаем в выходные по предварительной договоренности</label>
-                    </div>
-                    <div class="form">
-                        <img src="img/footer-form.png" alt="">
-                        <div class="section__title">
-                            <h2>Остались вопросы?</h2>
-                            <p>Оставьте ваши контакты и наш менеджер с вами свяжется</p>
-                        </div>
-
-                        <form action="">
-                            <div class="form__row">
-                                <div class="form__item">
-                                    <input type="text" placeholder="Имя">
-                                </div>
-                            </div>
-                            <div class="form__row">
-                                <div class="form__item">
-                                    <input type="text" placeholder="+7 (999) 88 88 888">
-                                </div>
-                            </div>
-
-                            <button class="_btn _btn-white">Отправить</button>
-                            <label>Нажимая на кнопку, вы даете свое согласие на обработку персональных данных
-                                в соответствии с политикой конфиденциальности</label>
-                        </form>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/footer-form.html')
 
 </main>
 

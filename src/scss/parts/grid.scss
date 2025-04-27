@@ -13,6 +13,18 @@
         }
     }
 
+    // .grid-3
+
+    &-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 64px 16px;
+
+        @media(max-width:768px) {
+            gap: 32px 15px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
     // .grid-4
 
     &-4 {

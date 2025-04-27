@@ -20,7 +20,349 @@
         </div>
     </div>
 
+    <section class="section cats page-top catalog-hero">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Каталог</h1>
+                </div>
 
+                @@include('html/parts/cats.html',{})
+
+                <div class="_attention">
+                    <img src="img/icons/attention.svg" alt="">
+                    <p>В каталоге указаны оптовые цены. Возможна розничная покупка — наценка от 30%. Для заявки
+                        добавьте товар в корзину и
+                        отметьте галочкой пункт «Мне нужен товар в розницу»</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section catalog">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="filter">
+                    <div class="filter-body">
+                        <div class="filter-top">
+                            <h4>Фильтры</h4>
+                            <button data-close-filter>Отмена</button>
+                        </div>
+                        <form action="#">
+                            <div class="filter-item">
+                                <h4>Цвет</h4>
+                                <div class="grid grid-2">
+                                    <label for="czvet-1">
+                                        <span></span>
+                                        <span>3000К</span>
+                                        <input type="checkbox" id="czvet-1" name="czvet" value="3000К">
+                                    </label>
+                                    <label for="czvet-2">
+                                        <span></span>
+                                        <span>6500/9000К</span>
+                                        <input type="checkbox" id="czvet-2" name="czvet" value="6500/9000К">
+                                    </label>
+                                    <label for="czvet-3">
+                                        <span></span>
+                                        <span>7000К</span>
+                                        <input type="checkbox" id="czvet-3" name="czvet" value="7000К">
+                                    </label>
+                                    <label for="czvet-4">
+                                        <span></span>
+                                        <span>Белый</span>
+                                        <input type="checkbox" id="czvet-4" name="czvet" value="Белый">
+                                    </label>
+                                    <label for="czvet-5">
+                                        <span></span>
+                                        <span>8000К</span>
+                                        <input type="checkbox" id="czvet-5" name="czvet" value="8000К">
+                                    </label>
+                                    <label for="czvet-6">
+                                        <span></span>
+                                        <span>Зеленый</span>
+                                        <input type="checkbox" id="czvet-6" name="czvet" value="Зеленый">
+                                    </label>
+                                    <label for="czvet-7">
+                                        <span></span>
+                                        <span>8500K</span>
+                                        <input type="checkbox" id="czvet-7" name="czvet" value="8500K">
+                                    </label>
+                                    <label for="czvet-8">
+                                        <span></span>
+                                        <span>Красный</span>
+                                        <input type="checkbox" id="czvet-8" name="czvet" value="Красный">
+                                    </label>
+                                    <label for="czvet-9">
+                                        <span></span>
+                                        <span>9000К</span>
+                                        <input type="checkbox" id="czvet-9" name="czvet" value="9000К">
+                                    </label>
+                                    <label for="czvet-10">
+                                        <span></span>
+                                        <span>Теплый</span>
+                                        <input type="checkbox" id="czvet-10" name="czvet" value="Теплый">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <h4>Мощность, W</h4>
+                                <div class="grid grid-2">
+                                    <label for="moshnost-4">
+                                        <span></span>
+                                        <span>0,2</span>
+                                        <input type="checkbox" id="moshnost-4" name="moshnost" value="0,2">
+                                    </label>
+                                    <label for="moshnost-5">
+                                        <span></span>
+                                        <span>1,0</span>
+                                        <input type="checkbox" id="moshnost-5" name="moshnost" value="1,0">
+                                    </label>
+                                    <label for="moshnost-6">
+                                        <span></span>
+                                        <span>0,4</span>
+                                        <input type="checkbox" id="moshnost-6" name="moshnost" value="0,4">
+                                    </label>
+                                    <label for="moshnost-7">
+                                        <span></span>
+                                        <span>1,2</span>
+                                        <input type="checkbox" id="moshnost-7" name="moshnost" value="1,2">
+                                    </label>
+                                    <label for="moshnost-8">
+                                        <span></span>
+                                        <span>0,5</span>
+                                        <input type="checkbox" id="moshnost-8" name="moshnost" value="0,5">
+                                    </label>
+                                    <label for="moshnost-9">
+                                        <span></span>
+                                        <span>1,5</span>
+                                        <input type="checkbox" id="moshnost-9" name="moshnost" value="1,5">
+                                    </label>
+                                    <label for="moshnost-10">
+                                        <span></span>
+                                        <span>0,72</span>
+                                        <input type="checkbox" id="moshnost-10" name="moshnost" value="0,72">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <h4>LED Тип</h4>
+                                <div class="grid grid-2">
+                                    <label for="led-1">
+                                        <span></span>
+                                        <span>2835</span>
+                                        <input type="checkbox" id="led-1" name="led" value="2835">
+                                    </label>
+                                    <label for="led-2">
+                                        <span></span>
+                                        <span>SMD2835</span>
+                                        <input type="checkbox" id="led-2" name="led" value="SMD2835">
+                                    </label>
+                                    <label for="led-3">
+                                        <span></span>
+                                        <span>SMD3535</span>
+                                        <input type="checkbox" id="led-3" name="led" value="SMD3535">
+                                    </label>
+                                    <label for="led-4">
+                                        <span></span>
+                                        <span>SMD</span>
+                                        <input type="checkbox" id="led-4" name="led" value="SMD">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <h4>Световой поток</h4>
+                                <div class="grid grid-2">
+                                    <label for="potok-1">
+                                        <span></span>
+                                        <span>2835</span>
+                                        <input type="checkbox" id="potok-1" name="potok" value="2835">
+                                    </label>
+                                    <label for="potok-2">
+                                        <span></span>
+                                        <span>SMD2835</span>
+                                        <input type="checkbox" id="potok-2" name="potok" value="SMD2835">
+                                    </label>
+                                    <label for="potok-3">
+                                        <span></span>
+                                        <span>SMD3535</span>
+                                        <input type="checkbox" id="potok-3" name="potok" value="SMD3535">
+                                    </label>
+                                    <label for="potok-4">
+                                        <span></span>
+                                        <span>SMD</span>
+                                        <input type="checkbox" id="potok-4" name="potok" value="SMD">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <h4>Угол рассеивания</h4>
+                                <div class="grid grid-2">
+                                    <label for="ugol-1">
+                                        <span></span>
+                                        <span>170°</span>
+                                        <input type="checkbox" id="ugol-1" name="ugol" value="170°">
+                                    </label>
+                                    <label for="ugol-2">
+                                        <span></span>
+                                        <span>15*45°</span>
+                                        <input type="checkbox" id="ugol-2" name="ugol" value="15*45°">
+                                    </label>
+                                    <label for="ugol-3">
+                                        <span></span>
+                                        <span>175°</span>
+                                        <input type="checkbox" id="ugol-3" name="ugol" value="175°">
+                                    </label>
+                                    <label for="ugol-4">
+                                        <span></span>
+                                        <span>90/110°</span>
+                                        <input type="checkbox" id="ugol-4" name="ugol" value="90/110°">
+                                    </label>
+                                    <label for="ugol-5">
+                                        <span></span>
+                                        <span>120-140°</span>
+                                        <input type="checkbox" id="ugol-5" name="ugol" value="120-140°">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <h4>Длина провода, мм</h4>
+                                <div class="grid grid-2">
+                                    <label for="dlina-1">
+                                        <span></span>
+                                        <span>60</span>
+                                        <input type="checkbox" id="dlina-1" name="dlina" value="60">
+                                    </label>
+                                    <label for="dlina-2">
+                                        <span></span>
+                                        <span>100</span>
+                                        <input type="checkbox" id="dlina-2" name="dlina" value="100">
+                                    </label>
+                                    <label for="dlina-3">
+                                        <span></span>
+                                        <span>70</span>
+                                        <input type="checkbox" id="dlina-3" name="dlina" value="70">
+                                    </label>
+                                    <label for="dlina-4">
+                                        <span></span>
+                                        <span>120</span>
+                                        <input type="checkbox" id="dlina-4" name="dlina" value="120">
+                                    </label>
+                                    <label for="dlina-5">
+                                        <span></span>
+                                        <span>80</span>
+                                        <input type="checkbox" id="dlina-5" name="dlina" value="80">
+                                    </label>
+                                    <label for="dlina-6">
+                                        <span></span>
+                                        <span>125</span>
+                                        <input type="checkbox" id="dlina-6" name="dlina" value="125">
+                                    </label>
+                                    <label for="dlina-7">
+                                        <span></span>
+                                        <span>87</span>
+                                        <input type="checkbox" id="dlina-7" name="dlina" value="87">
+                                    </label>
+                                    <label for="dlina-8">
+                                        <span></span>
+                                        <span>150</span>
+                                        <input type="checkbox" id="dlina-8" name="dlina" value="150">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-btn">
+                                <button class="_btn _btn-accent">Применить</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="catalog-content">
+                    <div class="catalog-content__top">
+                        <button data-open-filter>
+                            <img src="img/icons/filter.svg" alt="">
+                        </button>
+
+                        <div class="active-filters">
+                            <button class="reset-filters">Сбросить фильтры</button>
+                            <button class="active-filters_item" data-custom-field="czvet">
+                                8500К
+                                <svg width="12" height="12" viewBox="0 0 12 12">
+                                    <use xlink:href='img/svg/icons.svg#close' />
+                                </svg>
+                            </button>
+                            <button class="active-filters_item" data-custom-field="czvet">
+                                Белый
+                                <svg width="12" height="12" viewBox="0 0 12 12">
+                                    <use xlink:href='img/svg/icons.svg#close' />
+                                </svg>
+                            </button>
+                            <button class="active-filters_item" data-custom-field="czvet">
+                                12
+                                <svg width="12" height="12" viewBox="0 0 12 12">
+                                    <use xlink:href='img/svg/icons.svg#close' />
+                                </svg>
+                            </button>
+                            <button class="active-filters_item" data-custom-field="czvet">
+                                Белый
+                                <svg width="12" height="12" viewBox="0 0 12 12">
+                                    <use xlink:href='img/svg/icons.svg#close' />
+                                </svg>
+                            </button>
+                            <button class="active-filters_item" data-custom-field="czvet">
+                                Белый
+                                <svg width="12" height="12" viewBox="0 0 12 12">
+                                    <use xlink:href='img/svg/icons.svg#close' />
+                                </svg>
+                            </button>
+                            <button class="active-filters_item" data-custom-field="czvet">
+                                Белый
+                                <svg width="12" height="12" viewBox="0 0 12 12">
+                                    <use xlink:href='img/svg/icons.svg#close' />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="catalog-sort select-input">
+                            <label data-id="0">Сначала дешевые</label>
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                                <use xlink:href='img/svg/icons.svg#arrow' />
+                            </svg>
+                            <img src="img/icons/sort.svg" alt="">
+                            <div class="select">
+                                <div class="select-body">
+                                    <p>Показать сначала</p>
+                                    <span data-id="0" class="_active">Сначала дешевые</span>
+                                    <span data-id="1">Сначала дорогие</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-3">
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                    </div>
+                    <button class="_btn _btn-accent load-more">Показать еще</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/advantages.html')
+
+    @@include('./html/parts/advantages.html')
+
+    @@include('./html/parts/cta-accent.html')
+
+    @@include('./html/parts/faq.html')
+
+    @@include('./html/parts/footer-form.html')
 
 </main>
 

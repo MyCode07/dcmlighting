@@ -68,16 +68,25 @@ b {
 }
 
 h1 {
-    font-size: 64px;
-    font-weight: 700;
+    @include adaptive-value('font-size', 64, 32, 1);
     line-height: 1.1;
 }
 
+
 h2 {
     @include adaptive-value('font-size', 44, 28, 1);
-    font-weight: 700;
     line-height: 1.25;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
 
 ._btn {
     height: 60px;
@@ -246,6 +255,39 @@ h2 {
     pointer-events: none;
 }
 
+._attention {
+    display: flex;
+    gap: 16px;
+    border-radius: 8px;
+    border: 1px solid $accent;
+    padding: 12px;
+    max-width: 500px;
+    width: 100%;
+
+    @media (max-width:1024px) {
+        max-width: 100%;
+    }
+
+    img,
+    picture {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+
+    p {
+        color: $grey;
+        font-size: 14px;
+        line-height: 1.4;
+
+        @media (max-width:768px) {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
+
+
 .breadcrumbs {
     margin-top: 32px;
     margin-bottom: 16px;
@@ -393,6 +435,153 @@ h2 {
 
         @media (max-width:768px) {
             font-size: 12px;
+        }
+    }
+}
+
+.page-top {
+    h1 {
+        @include adaptive-value('font-size', 44, 28, 1);
+    }
+
+    ._attention {
+        max-width: none;
+        margin-top: 16px;
+
+        @media (max-width:768px) {
+            margin-bottom: 15px;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.select {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 100%;
+    transform: translate(0, 4px);
+    z-index: 1;
+    display: none;
+
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #ededed;
+
+
+    // .select-input
+
+    &-input {
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 145%;
+
+        padding: 8px 12px;
+        border-radius: 8px;
+        background-color: #ededed;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-width: 152px;
+
+        img,
+        label,
+        svg {
+            pointer-events: none;
+            flex: 0 0 auto;
+        }
+ 
+        label {
+            white-space: nowrap;
+            max-width: calc(100% - 20px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        svg {
+            width: 12px;
+            height: 10px;
+            stroke: currentColor;
+            transition: transform 0.3s ease 0s;
+        }
+
+        &._active {
+            .select {
+                display: block;
+            }
+
+            img,
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // .select-body
+
+    &-body {
+        max-height: 290px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-thumb {
+            background: #d9d9d9;
+        }
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            border-radius: 10px;
+        }
+
+        @media (any-hover: none) {
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+        }
+
+        & > :not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+
+            &[data-disabled] {
+                opacity: 0.5;
+            }
+
+            &._active:after {
+                display: block;
+            }
+
+            &:after {
+                display: none;
+                content: '';
+                width: 12px;
+                height: 12px;
+                flex: 0 0 auto;
+
+                background-image: url('@img/icons/select-ok.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
         }
     }
 }
