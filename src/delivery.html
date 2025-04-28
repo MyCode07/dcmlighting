@@ -1,0 +1,56 @@
+@@include('./html/head.html', {
+"title":"О нас",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href=""><span>Главная</span></a>
+                    <div>/</div>
+                </li>
+                <li><span>О нас</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section delivery">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Доставка <br><span>Удобно. Надёжно. В срок.</span></h1>
+                    <p>Мы доставим ваш заказ в удобное для вас время и место. Все отправления сопровождаются
+                        трекинг-номером — вы сможете
+                        отслеживать статус доставки в реальном времени и получите уведомление о прибытии груза.</p>
+                </div>
+                <div class="grid grid-2">
+                    <div class="delivery-text _text-box">
+                        <h3>Условия доставки:</h3>
+                        <ul>
+                            <li>Минимальная сумма заказа — от 30 000 руб.</li>
+                            <li>Доставка до транспортных компаний (СДЭК, Мейджик Транс и др.) — при заказе от 15 000 руб.</li>
+                            <li>Бесплатная доставка по Москве (в пределах МКАД) — при заказе от 20 000 руб.</li>
+                            <li>Доставка за МКАД и по регионам России — по тарифам транспортных компаний. Мы работаем с надёжными партнёрами: СДЭК, Деловые Линии, ПЭК, Мейджик Транс и другими.</li>
+                        </ul>
+                    </div>
+
+                    <div class="delivery-img">
+                        <img src="img/delivery.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @@include('./html/parts/footer-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

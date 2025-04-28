@@ -1,0 +1,91 @@
+@@include('./html/head.html', {
+"title":"Контакты",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href=""><span>Главная</span></a>
+                    <div>/</div>
+                </li>
+                <li><span>Контакты</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section footer-form">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid grid-2">
+                    <div class="footer-form__contnet">
+                        <a href="" class="logo">
+                            <img src="@img/logo.png" alt="">
+                            <span>Светодиодные комплектующие <br> для световой рекламы и освещения</span>
+                        </a>
+
+                        <a href="" class="link-big" target="_blank">+7 991 962-03-071</a>
+                        <a href="mailto:" class="link-big" target="_blank">dcmodule@mail.ru</a>
+                        <ul class="_social">
+                            <li>
+                                <a href="" target="_blank">
+                                    <svg width="20" height="18" viewBox="0 0 20 18">
+                                        <use xlink:href='@img/svg/icons.svg#tg' />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">
+                                    <svg width="20" height="20" viewBox="0 0 20 20">
+                                        <use xlink:href='@img/svg/icons.svg#wa' />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <a href="" target="_blank" class="address">
+                            <span>
+                                <svg width="16" height="20" viewBox="0 0 16 20">
+                                    <use xlink:href='@img/svg/icons.svg#location' />
+                                </svg>
+                            </span>
+                            <p>11399, г. Москва, Электродная 2 с 12-14 подъезд 17
+                                <i>продолжение второй строки</i>
+                            </p>
+                        </a>
+                        <a href="" target="_blank" class="address">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                    <use xlink:href='@img/svg/icons.svg#time' />
+                                </svg>
+                            </span>
+                            <p>9:00-18:00 (пн-пт)* </p>
+                        </a>
+                        <label class="address-extra">*работаем в выходные по предварительной договоренности</label>
+                    </div>
+                    <div class="form map">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4e5502a3c1cb0cf6dc9c2c109e567006cc853d533f1f81a73689aff26e9984f3&amp;source=constructor"
+                            width="100%" height="530" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/clients.html')
+
+    @@include('./html/parts/faq.html')
+
+
+    @@include('./html/parts/footer-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

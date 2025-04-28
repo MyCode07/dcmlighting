@@ -1,0 +1,33 @@
+@@include('./html/head.html', {
+"title":"О нас",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href=""><span>Главная</span></a>
+                    <div>/</div>
+                </li>
+                <li><span>О нас</span></li>
+            </ul>
+        </div>
+    </div>
+
+    @@include('./html/parts/dsm.html')
+
+    @@include('./html/parts/advantages.html')
+    
+    @@include('./html/parts/clients.html')
+
+    @@include('./html/parts/footer-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

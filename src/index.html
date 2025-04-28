@@ -115,44 +115,7 @@
         </div>
     </section>
 
-    <section class="section dsm">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__flex">
-                    <div class="section__flex-left">
-                        <div>
-                            <h2>ДСМ Освещение – <br> надёжный поставщик светодиодного освещения</h2>
-                            <p>Мы предлагаем <b>сертифицированную продукцию с гарантией</b>, стабильные поставки и
-                                выгодные условия сотрудничества.</p>
-                        </div>
-                        <ol class="_icon-list">
-                            <li>
-                                <img src="img/icons/business.svg" alt="">
-                                <span>Для бизнеса</span>
-                            </li>
-                            <li>
-                                <img src="img/icons/industry.svg" alt="">
-                                <span>Для промышленности</span>
-                            </li>
-                            <li>
-                                <img src="img/icons/government.svg" alt="">
-                                <span>Для государственных учреждений</span>
-                            </li>
-                        </ol>
-                        <button class="_btn _btn-accent ">Получить презентацию</button>
-                    </div>
-                    <div class="section__flex-right">
-                        <video playsinline poster="img/Video.png" muted loop class="_video">
-                            <source src="files/video.mp4" type="video/mp4">
-                        </video>
-                        <button>
-                            <img src="img/icons/play.svg" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/dsm.html')
 
     @@include('./html/parts/advantages.html')
 
@@ -283,56 +246,8 @@
             </div>
         </div>
     </section>
-
-    <section class="section clients">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__title">
-                    <h2>Наши клиенты</h2>
-                </div>
-                <div class="clients-slider">
-                    <button class="prev">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
-                            <use xlink:href='img/svg/icons.svg#arrow' />
-                        </svg>
-                    </button>
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/client.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="next">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
-                            <use xlink:href='img/svg/icons.svg#arrow' />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    
+    @@include('./html/parts/clients.html')
 
     <section class="section reviews">
         <div class="section__container _container">

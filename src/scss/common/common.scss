@@ -71,6 +71,7 @@ b {
 h1 {
     @include adaptive-value('font-size', 64, 32, 1);
     line-height: 1.1;
+    line-height: 110%;
 
     span {
         color: $accent
@@ -80,11 +81,12 @@ h1 {
 
 h2 {
     @include adaptive-value('font-size', 44, 28, 1);
-    line-height: 1.25;
+    line-height: 125%;
 }
 
 h3 {
     font-size: 28px;
+    line-height: 145%;
 
     @media (max-width:768px) {
         font-size: 20px;
@@ -632,5 +634,52 @@ h6 {
 
     & > :last-child {
         margin-bottom: 0;
+    }
+
+    ul {
+        & > :not(:last-child) {
+            margin-bottom: 1em;
+        }
+
+        li {
+            padding-left: 16px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0.4em;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $accent;
+            }
+        }
+    }
+
+    img,
+    picture,
+    figure {
+        margin-bottom: 1em;
+    }
+
+    figure {
+        img,
+        picture {
+            margin-bottom: 0;
+        }
+    }
+
+    figcaption {
+        font-size: 15px;
+        color: $grey;
+        line-height: 145%;
+        display: block;
+        margin-top: 12px;
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
     }
 }
