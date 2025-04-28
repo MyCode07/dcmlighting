@@ -52,6 +52,7 @@ img,
 svg,
 picture,
 figure {
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -70,12 +71,24 @@ b {
 h1 {
     @include adaptive-value('font-size', 64, 32, 1);
     line-height: 1.1;
+
+    span {
+        color: $accent
+    }
 }
 
 
 h2 {
     @include adaptive-value('font-size', 44, 28, 1);
     line-height: 1.25;
+}
+
+h3 {
+    font-size: 28px;
+
+    @media (max-width:768px) {
+        font-size: 20px;
+    }
 }
 
 h1,
@@ -443,7 +456,11 @@ h6 {
     h1 {
         @include adaptive-value('font-size', 44, 28, 1);
     }
+}
 
+.hero,
+.page-top,
+.product-descr {
     ._attention {
         max-width: none;
         margin-top: 16px;
@@ -500,7 +517,7 @@ h6 {
             pointer-events: none;
             flex: 0 0 auto;
         }
- 
+
         label {
             white-space: nowrap;
             max-width: calc(100% - 20px);
@@ -583,5 +600,37 @@ h6 {
                 background-repeat: no-repeat;
             }
         }
+    }
+}
+
+._text-box {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 1em;
+    }
+
+    p,
+    ol,
+    ul,
+    a,
+    b,
+    strong,
+    em,
+    i {
+        margin-bottom: 1em;
+        font-size: 16px;
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
     }
 }

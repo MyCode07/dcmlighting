@@ -1,0 +1,77 @@
+@@include('./html/head.html', {
+"title":"Категория",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href=""><span>Главная</span></a>
+                    <div>/</div>
+                </li>
+                <li>
+                    <a href=""><span>Каталог</span></a>
+                    <div>/</div>
+                </li>
+                <li><span>Категория</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero__container _container">
+            <div class="hero__body">
+                <div class="hero__content">
+                    <div>
+                        <h1>Надежный партнер в оптовых продажах <span>гибкого неона</span></h1>
+                        <p>Отправьте заявку на просчет <br> и <b>получите скидку 7%</b> на первый заказ</p>
+                    </div>
+
+                    @@include('html/parts/hero-part.html',{})
+                </div>
+                <div class="hero__img">
+                    <img src="img/cat-hero.png" alt="">
+                    <label>*Минимальный заказ от 30 000₽</label>
+                </div>
+            </div>
+            <div class="_attention">
+                <img src="img/icons/attention.svg" alt="">
+                <p>В каталоге указаны оптовые цены. Возможна розничная покупка — наценка от 30%. Для заявки
+                    добавьте товар в корзину и
+                    отметьте галочкой пункт «Мне нужен товар в розницу»</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cats">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Наша продукция</h2>
+                </div>
+
+                @@include('html/parts/cats.html',{})
+            </div>
+        </div>
+    </section>
+
+
+
+    @@include('./html/parts/advantages.html')
+
+    @@include('./html/parts/cta-accent.html')
+
+    @@include('./html/parts/faq.html')
+
+    @@include('./html/parts/footer-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

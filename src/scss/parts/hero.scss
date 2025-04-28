@@ -130,13 +130,32 @@
             picture {
                 max-height: 100%;
                 object-fit: contain;
+                object-position: right;
             }
         }
 
         @media (max-width:768px) {
+            position: relative;
             margin-top: 24px;
             border-radius: 16px;
             background-color: #f6f6f6;
+        }
+
+        label {
+            position: absolute;
+            right: 19px;
+            bottom: 17px;
+            color: $soft_grey;
+            font-family: Onest;
+            font-size: 14px;
+            line-height: 140%;
+
+            @media (max-width:768px) {
+                font-size: 12px;
+                right: unset;
+                left: 16px;
+                bottom: 16px;
+            }
         }
     }
 }

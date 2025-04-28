@@ -1,0 +1,257 @@
+@@include('./html/head.html', {
+"title":"Товар",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href=""><span>Главная</span></a>
+                    <div>/</div>
+                </li>
+                <li>
+                    <a href=""><span>Каталог</span></a>
+                    <div>/</div>
+                </li>
+                <li>
+                    <a href=""><span>Категория</span></a>
+                    <div>/</div>
+                </li>
+                <li><span>Товар</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section single-product">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid grid-2">
+                    <div class="single-product__slider">
+                        <div class="swiper slider-big">
+                            <button class="prev">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                                    <use xlink:href='img/svg/icons.svg#arrow' />
+                                </svg>
+                            </button>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="" data-fancybox="slider">
+                                        <img src="img/single-product.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" data-fancybox="slider">
+                                        <img src="img/single-product.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" data-fancybox="slider">
+                                        <img src="img/single-product.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" data-fancybox="slider">
+                                        <img src="img/single-product.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="next">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                                    <use xlink:href='img/svg/icons.svg#arrow' />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="swiper slider-small" thumbsSlider>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/single-product.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/single-product.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/single-product.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/single-product.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-product__contnet">
+                        <h1>Светодиодный модуль В1CW</h1>
+                        <div class="_text-box">
+                            <p>Яркие и долговечные светодиодные модули для создания эффектных вывесок и световых
+                                коробов. Подходят для использования в
+                                помещении и на улице.</p>
+                        </div>
+                        <ol class="_chars">
+                            <li><span>Напряжение</span><i></i><span><b>220V</b></span></li>
+                            <li><span>Мощность</span><i></i><span><b>10W</b></span></li>
+                            <li><span>Яркость</span><i></i><span><b>4000K</b></span></li>
+                            <li><span>Степень защиты</span><i></i><span><b>IP67</b></span></li>
+                        </ol>
+                        <div class="single-product__price">
+                            <span>
+                                <ins>1 500₽</ins>
+                                <del>2 000₽</del>
+                            </span>
+                            <div class="_sale">-25%</div>
+                        </div>
+                        <div class="grid grid-2">
+                            <button class="_btn _btn-accent">Запросить КП</button>
+                            <button class="_btn _btn-white">Добавить в заказ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section product-descr">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="_attention">
+                    <img src="img/icons/attention.svg" alt="">
+                    <p>В каталоге указаны оптовые цены. Возможна розничная покупка — наценка от 30%. Для заявки
+                        добавьте товар в корзину и
+                        отметьте галочкой пункт «Мне нужен товар в розницу»</p>
+                </div>
+
+                <div class="product-descr__text">
+                    <h2>Описание</h2>
+                    <div class="_text-box">
+                        <p>Наша белая светодиодная лента с нейтральным холодным свечением 6000K создана для
+                            коммерческого
+                            использования. Степень
+                            защиты IP54 обеспечивает надежную работу в условиях повышенной влажности. Лента легко
+                            режется
+                            каждые
+                            5 см (по меткам),
+                            что позволяет точно подогнать длину под любой проект.</p>
+                    </div>
+                    <button class="_more-text" data-text-show="Скрыть" data-text-hide="Подробнее">Подробнее</button>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="product-descr__cahrs">
+                        <h3>Характеристики</h3>
+                        <ol class="_chars">
+                            <li><span>Напряжение</span><i></i><span><b>220V</b></span></li>
+                            <li><span>Мощность</span><i></i><span><b>10W</b></span></li>
+                            <li><span>Яркость</span><i></i><span><b>4000K</b></span></li>
+                            <li><span>Степень защиты</span><i></i><span><b>IP67</b></span></li>
+                        </ol>
+                    </div>
+                    <div class="product-descr__docs">
+                        <h3>Документы</h3>
+                        <a href="" target="_blank" download="">
+                            <img src="img/icons/doc.svg" alt="">
+                            <span>Тех. паспорт</span>
+                        </a>
+                        <a href="" target="_blank" download="">
+                            <img src="img/icons/doc.svg" alt="">
+                            <span>Лицензия</span>
+                        </a>
+                        <a href="" target="_blank" download="">
+                            <img src="img/icons/doc.svg" alt="">
+                            <span>Гарантия</span>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section advantages">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h3>Преимущества товара</h3>
+                </div>
+
+                <div class="grid grid-4">
+                    <div class="advantages-item">
+                        <div>
+                            <h5>Бесплатная доставка</h5>
+                            <p>при заказе от 20 000₽</p>
+                        </div>
+                        <span>
+                            <img src="@img/icons/advantages-2.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item">
+                        <div>
+                            <h5>Энергоэффективность</h5>
+                            <p>Экономия электроэнергии</p>
+                        </div>
+                        <span>
+                            <img src="@img/icons/advantages-4.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item  _accent-bgc">
+                        <div>
+                            <h5>Простота монтажа</h5>
+                            <p>Не нужны профильные специалисты для установки</p>
+                        </div>
+                        <span>
+                            <img src="@img/icons/advantages-7.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="advantages-item ">
+                        <div>
+                            <h5>Устойчивость к влаге</h5>
+                            <p>Подходит для влажного климата/p>
+                        </div>
+                        <span>
+                            <img src="@img/icons/advantages-9.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section related">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h3>Похожие товары</h3>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            @@include('html/parts/product.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product.html',{})
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/footer-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

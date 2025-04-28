@@ -46,6 +46,10 @@
         }
 
         h2 {}
+
+        h3 {
+            @include adaptive-value('font-size', 28, 20, 1);
+        }
     }
 
 }
@@ -80,7 +84,7 @@
             align-items: flex-start;
         }
 
-        
+
     }
 }
 
@@ -217,6 +221,7 @@
 }
 
 .advantages {
+
     .grid {
         @media (max-width:725px) {
             grid-template-columns: 1fr;
@@ -1120,7 +1125,7 @@
 
 .error {
     @include adaptive-value('margin-top', 64, 20, 1);
-    
+
 
     @media (min-width:769px) {
         text-align: center;

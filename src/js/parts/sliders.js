@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, FreeMode, Thumbs } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
 if (sliders.length) {
@@ -24,6 +24,57 @@ if (sliders.length) {
 
 
         if (slider.closest('.reviews')) {
+            new Swiper(slider, {
+                modules: [
+                    Navigation
+                ],
+                spaceBetween: 16,
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+
+                breakpoints: {
+                    769: {
+                        slidesPerView: 4,
+                    },
+                    300: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+        }
+
+
+
+        if (slider.closest('.single-product')) {
+            const thumbs = new Swiper('.slider-small', {
+                modules: [
+                    FreeMode
+                ],
+                freeMode: true,
+                watchSlidesProgress: true,
+                slidesPerView: 'auto',
+                spaceBetween: 8,
+            });
+
+            new Swiper('.slider-big', {
+                modules: [
+                    Thumbs, Navigation
+                ],
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+                spaceBetween: 10,
+                slidesPerView: 1,
+                thumbs: {
+                    swiper: thumbs,
+                },
+            });
+        }
+
+        if (slider.closest('.related')) {
             new Swiper(slider, {
                 modules: [
                     Navigation
