@@ -44,6 +44,123 @@
         textarea {}
     }
 
+    // .form__checkbox
+
+    &__checkbox {
+        margin-bottom: 8px;
+
+        & > :not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+
+            input {
+                display: none;
+            }
+
+            &:has(input:checked) i {
+                background-image: url('@img/icons/checkbox.svg');
+            }
+
+            i {
+                display: block;
+                flex: 0 0 auto;
+                width: 20px;
+                height: 20px;
+                border-radius: 4px;
+                background-color: $white;
+                border: 1px solid #bcbcbc;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 12px 9px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 145%;
+
+                & > :nth-child(2) {
+                    display: block;
+                    margin-top: 4px;
+                    color: $soft_grey;
+                    font-size: 12px;
+                    line-height: 145%;
+                }
+            }
+        }
+    }
+
+
+    // .form__radio
+
+    &__radio {
+        margin-bottom: 12px;
+
+        & > :not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 15px;
+            line-height: 145%;
+            cursor: pointer;
+
+            &:has(input:checked) i:after {
+                display: block;
+            }
+
+            i {
+                width: 16px;
+                height: 16px;
+                flex: 0 0 auto;
+                border-radius: 50%;
+                border: 1px solid $accent;
+                background-color: $white;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                &:after {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-color: $accent;
+                    border-radius: 50%;
+                    flex: 0 0 auto;
+                    display: none;
+                }
+            }
+
+            input {
+                display: none;
+            }
+
+        }
+    }
+
+    // .form-privacy
+
+    &-privacy {
+        margin-top: 12px;
+        color: #BCBCBC;
+        font-size: 13px;
+        line-height: 145%;
+
+        @media (max-width:768px){
+            font-size: 11px;
+        }
+    }
+
     ._btn {
         min-width: 200px;
 

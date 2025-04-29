@@ -167,8 +167,9 @@
             background-color: rgba($color: $black, $alpha: 0.7);
             pointer-events: all;
 
-            .filter-body {
-                transform: translate(0, 0);
+            .filter-body,
+            .filter-btn {
+                transform: translate3d(0, 0, 0);
             }
         }
     }
@@ -193,7 +194,7 @@
             padding: 20px 20px 120px 20px;
 
             transition: transform 0.3s ease 0s;
-            transform: translate(-100%, 0);
+            transform: translate3d(-100%, 0, 0);
         }
 
         @media (max-width:768px) {
@@ -238,6 +239,12 @@
 
         @media (max-width:1024px) {
             gap: 16px;
+        }
+
+        button {
+            @media (max-width:1024px) {
+                display: none;
+            }
         }
     }
 
@@ -328,6 +335,10 @@
     // .filter-btn
 
     &-btn {
+        @media (min-width:1025px) {
+            display: none;
+        }
+
         @media (max-width:1024px) {
             position: fixed;
             left: 0;
@@ -336,6 +347,9 @@
             max-width: 375px;
             padding: 8px 20px 20px 20px;
             background-color: $white;
+
+            transition: transform 0.3s ease 0s;
+            transform: translate3d(-100%, 0, 0);
         }
 
         @media (max-width:768px) {

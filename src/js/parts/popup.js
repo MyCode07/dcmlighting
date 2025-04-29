@@ -7,7 +7,7 @@ document.addEventListener('click', function (e) {
 
     if (targetEl.hasAttribute('data-open-popup')) {
         e.preventDefault();
-        const id = targetEl.getAttribute('data-id');
+        const id = targetEl.getAttribute('data-open-popup');
         const popup = document.querySelector(`.popup#${id}`);
 
         if (popup) {
@@ -21,7 +21,7 @@ document.addEventListener('click', function (e) {
         closePopup(targetEl)
     }
 
-    if (targetEl.classList.contains('popup__close') || targetEl.hasAttribute('data-close-popup')) {
+    if (targetEl.classList.contains('popup-close') || targetEl.hasAttribute('data-close-popup')) {
         const popup = targetEl.closest('.popup');
         closePopup(popup)
     }

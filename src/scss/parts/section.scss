@@ -509,6 +509,20 @@
 
     }
 
+    &.contact-form {
+
+        @media (max-width:768px) {
+            .cta-img {
+                display: none;
+            }
+
+            .cta-content {
+                padding-bottom: 24px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .section__body {
         border-radius: 16px;
         background-color: $bgc;
@@ -794,7 +808,7 @@
     .section__title {
         @media (max-width:768px) {
             gap: 8px;
-
+            flex-direction: row;
 
             h2 {
                 margin-right: auto;
@@ -1287,6 +1301,31 @@
 
         @media (max-width:768px) {
             font-size: 14px;
+        }
+    }
+}
+
+.analyze,
+.solution,
+.params {
+    .section__title {
+        gap: 8px;
+
+        h2 {
+            @include adaptive-value('font-size', 28, 20, 1);
+        }
+
+        p {
+            @include adaptive-value('font-size', 16, 14, 1);
+        }
+    }
+
+    .grid {
+        gap: 16px;
+
+        @media (max-width:768px) {
+            grid-template-columns: 1fr;
+            gap: 8px;
         }
     }
 }

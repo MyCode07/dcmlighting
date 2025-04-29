@@ -1,6 +1,6 @@
 // import { maskInputs } from "./static/inputmask.js";
- import "./parts/menu.js";
-// import "./parts/popup.js";
+import "./parts/menu.js";
+import "./parts/popup.js";
 import "./parts/sliders.js";
 import "./parts/catalog.js";
 // import "./parts/tabs.js";

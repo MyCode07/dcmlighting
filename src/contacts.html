@@ -82,8 +82,34 @@
 
     @@include('./html/parts/faq.html')
 
-
-    @@include('./html/parts/footer-form.html')
+    <section class="section cta _cta-accent contact-form">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="cta-content">
+                    <div>
+                        <h2>Остались вопросы?</h2>
+                        <p>Оставьте ваши контакты и наш менеджер с вами свяжется</p>
+                    </div>
+                    <div class="form">
+                        <div class="form__row">
+                            <div class="form__item">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="form__item">
+                                <input type="text" class="_mask-phone" placeholder="+7977977977">
+                            </div>
+                            <button class="_btn _btn-white">Отправить</button>
+                        </div>
+                        <label>Нажимая на кнопку, вы даете свое согласие на обработку персональных данных в соответствии
+                            с политикой конфиденциальности</label>
+                    </div>
+                </div>
+                <div class="cta-img">
+                    <img src="img/contact-form.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 

@@ -1,3 +1,14 @@
+.border-item {
+    border-radius: 16px;
+    background-color: $bgc;
+    padding: 20px;
+
+    @media (max-width:768px) {
+        padding: 16px;
+        border-radius: 8px;
+    }
+}
+
 .cats-item {
     border-radius: 8px;
     padding: 16px;
@@ -55,8 +66,12 @@
         transition: all 0.3s ease 0s;
         border: 1px solid transparent;
 
+
+        img,
         svg {
             fill: $black;
+            width: 14px;
+            height: 14px;
         }
 
         @media (max-width:425px) {
@@ -299,5 +314,131 @@
 
     div {
         margin-bottom: 8px;
+    }
+}
+
+.analyze-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width:768px) {
+        flex-direction: row-reverse;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 140%;
+        flex: 1 1 auto;
+
+        @media (max-width:768px) {
+            font-size: 16px;
+        }
+    }
+
+    img,
+    svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.solution-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (max-width:768px) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+
+        text-align: center;
+        @include adaptive-value('font-size', 20, 16, 1);
+        font-weight: 600;
+        line-height: 125%;
+
+        width: 36px;
+        height: 36px;
+        background-color: $white;
+        border-radius: 8px;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 140%;
+
+        @media (max-width:768px) {
+            font-size: 16px;
+        }
+    }
+
+    ul {
+        padding-left: 1.5em;
+        line-height: 145%;
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+
+        & > :not(:last-child) {
+            margin-bottom: 12px;
+
+            @media (max-width:768px) {
+                margin-bottom: 8px;
+            }
+        }
+
+        li {
+            list-style: initial;
+        }
+    }
+
+}
+
+.params-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 140%;
+
+        @media (max-width:768px) {
+            font-size: 16px;
+        }
+    }
+
+    ul {
+        line-height: 145%;
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+
+        & > :not(:last-child) {
+            margin-bottom: 12px;
+
+            @media (max-width:768px) {
+                margin-bottom: 8px;
+            }
+        }
     }
 }
