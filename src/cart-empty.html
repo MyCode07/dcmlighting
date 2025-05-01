@@ -1,0 +1,39 @@
+@@include('./html/head.html', {
+"title":"Корзина",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul>
+                <li>
+                    <a href=""><span>Главная</span></a>
+                    <div>/</div>
+                </li>
+                <li><span>Корзина</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section error thanks">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h1>Ваша корзина пуста!</h1>
+                <img src="https://stynergy.ru/wp-content/themes/blank-sheet/assets/img/icons/empty-cart.svg" alt="">
+                <p>Для оформления заказа нужно добавить хотя бы один товар в корзину.</p>
+                <a href="" class="_btn _btn-accent">Перейти в каталог</a>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/footer-form.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

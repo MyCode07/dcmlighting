@@ -111,6 +111,9 @@
 
                     <a href="">Все кейсы</a>
                 </div>
+
+                @@include('./html/parts/case.html')
+
             </div>
         </div>
     </section>
@@ -249,49 +252,7 @@
 
     @@include('./html/parts/clients.html')
 
-    <section class="section reviews">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__title">
-                    <h2>Благодарности</h2>
-                    <button class="prev">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
-                            <use xlink:href='img/svg/icons.svg#arrow' />
-                        </svg>
-                    </button>
-                    <button class="next">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
-                            <use xlink:href='img/svg/icons.svg#arrow' />
-                        </svg>
-                    </button>
-                </div>
-                <div class="reviews-slider">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/review.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/review.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/review.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/review.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/review.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/review.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/reviews.html')
 
     <section class="section cta  cta-garantiya _cta-accent">
         <div class="section__container _container">
@@ -310,7 +271,6 @@
             </div>
         </div>
     </section>
-
 
     @@include('./html/parts/faq.html')
 

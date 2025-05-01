@@ -70,7 +70,6 @@ b {
 
 h1 {
     @include adaptive-value('font-size', 64, 32, 1);
-    line-height: 1.1;
     line-height: 110%;
 
     span {
@@ -263,6 +262,27 @@ h6 {
     img,
     svg {
         transform: rotate(-90deg);
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    span {
+        flex: 0 0 auto;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $accent_hover;
+        cursor: pointer;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $accent;
+        }
     }
 }
 
@@ -665,6 +685,7 @@ h6 {
     }
 
     figure {
+
         img,
         picture {
             margin-bottom: 0;

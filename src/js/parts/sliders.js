@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, FreeMode, Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, FreeMode, Thumbs } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
 if (sliders.length) {
@@ -7,6 +7,7 @@ if (sliders.length) {
         const section = slider.closest('section');
         const prev = section.querySelector('.prev');
         const next = section.querySelector('.next');
+        const pagination = section.querySelector('.pagination');
 
         if (slider.closest('.clients')) {
             new Swiper(slider, {
@@ -44,8 +45,6 @@ if (sliders.length) {
                 }
             });
         }
-
-
 
         if (slider.closest('.single-product')) {
             const thumbs = new Swiper('.slider-small', {
@@ -93,6 +92,34 @@ if (sliders.length) {
                         slidesPerView: 2,
                     }
                 }
+            });
+        }
+
+        if (slider.closest('.case-images')) {
+            new Swiper(slider, {
+                modules: [
+                    Navigation
+                ],
+                spaceBetween: 16,
+                slidesPerView: 1,
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+            });
+        }
+
+        if (slider.closest('.case-products')) {
+            new Swiper(slider, {
+                modules: [
+                    Pagination
+                ],
+                spaceBetween: 16,
+                slidesPerView: 1,
+                pagination: {
+                    el: pagination,
+                    clickable: true,
+                },
             });
         }
     })
