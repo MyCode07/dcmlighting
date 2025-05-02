@@ -31,22 +31,22 @@ export const runTicker = () => {
         let direction = 1;
         const roll = scroll(line, { duration: 20 })
 
-        if (!isMobile.any())
-            ScrollTrigger.create({
-                onUpdate(self) {
-                    if (self.direction !== direction) {
-                        direction *= -1;
-                        gsap.to(roll, {
-                            timeScale: direction,
-                            overwrite: true,
-                        });
-                    }
-                    roll.timeScale(self.direction * 2)
+        // if (!isMobile.any())
+        //     ScrollTrigger.create({
+        //         onUpdate(self) {
+        //             if (self.direction !== direction) {
+        //                 direction *= -1;
+        //                 gsap.to(roll, {
+        //                     timeScale: direction,
+        //                     overwrite: true,
+        //                 });
+        //             }
+        //             roll.timeScale(self.direction * 2)
 
-                    setTimeout(() => {
-                        roll.timeScale(self.direction)
-                    }, 100);
-                }
-            });
+        //             setTimeout(() => {
+        //                 roll.timeScale(self.direction)
+        //             }, 100);
+        //         }
+        //     });
     })
 }

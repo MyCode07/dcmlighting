@@ -1,9 +1,9 @@
-// import { maskInputs } from "./static/inputmask.js";
+import { maskInputs } from "./static/inputmask.js";
 import "./parts/menu.js";
 import "./parts/popup.js";
 import "./parts/sliders.js";
 import "./parts/catalog.js";
-// import "./parts/tabs.js";
+import "./parts/show-more.js";
 import { accorden } from "./static/accordeon.js";
 import { runTicker } from "./static/ticker.js";
 import { Fancybox } from "@fancyapps/ui";
@@ -11,7 +11,7 @@ import { Fancybox } from "@fancyapps/ui";
 accorden();
 runTicker()
 
-// maskInputs('+7 (999) 999-99-99', '._mask-phone')
+maskInputs('+7 (999) 999-99-99', '._mask-phone')
 
 Fancybox.bind("[data-fancybox]", {
 });

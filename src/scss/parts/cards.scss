@@ -134,11 +134,28 @@
         }
     }
 
-    span {
+    // .product-item__price
+
+    &__price {
         color: $soft_grey;
         line-height: 1.4;
         display: block;
         margin-bottom: 16px;
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 8px;
+
+        ins {
+            color: $black;
+            text-decoration: none;
+        }
+
+        del {
+            font-size: 0.9em;
+            text-decoration: line-through;
+        }
 
         @media (max-width:768px) {
             margin-bottom: 12px;

@@ -219,8 +219,8 @@ h6 {
     }
 }
 
-.prev,
-.next {
+button.prev,
+button.next {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,7 +257,7 @@ h6 {
     }
 }
 
-.next {
+button.next {
 
     img,
     svg {
@@ -702,5 +702,78 @@ h6 {
         @media (max-width:768px) {
             font-size: 14px;
         }
+    }
+}
+
+ul.page-numbers {
+    margin-inline: auto;
+    margin-top: 32px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @media (max-width:768px) {
+        gap: 4px;
+    }
+
+    li {
+        flex: 0 0 auto;
+    }
+
+    a,
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+
+        transition: all 0.3s ease 0s;
+
+        @media (max-width:768px) {
+            width: 36px;
+            height: 36px;
+        }
+
+        img,
+        svg {
+            width: 50%;
+            fill: $black;
+            flex: 0 0 auto;
+        }
+    }
+
+    a {
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent;
+            }
+        }
+    }
+
+    span {
+        background-color: $bgc;
+    }
+
+    .next,
+    .prev {
+        background-color: $accent;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent_hover;
+            }
+        }
+    }
+
+
+    @media (max-width:768px) {
+        margin-top: 24px;
     }
 }

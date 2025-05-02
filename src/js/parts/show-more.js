@@ -1,10 +1,10 @@
-const btnsMore = document.querySelectorAll('.show-hidden-acordeon');
+const btnsMore = document.querySelectorAll('._more-text');
 
 if (btnsMore.length) {
     btnsMore.forEach(btn => {
-        const acordeon = btn.nextElementSibling
+        const hidden = btn.previousElementSibling
 
-        if (acordeon) {
+        if (hidden) {
             btn.addEventListener('click', () => {
                 btn.classList.toggle('_active')
 
@@ -15,7 +15,7 @@ if (btnsMore.length) {
                     btn.textContent = btn.dataset.textShow
                 }
 
-                acordeon.classList.toggle('_active')
+                hidden.classList.toggle('_active')
             })
         }
     })
