@@ -1,6 +1,10 @@
 .single-product {
     @media (min-width:1025px) {
         padding-bottom: 76px;
+
+        &:has(.swiper-slide:only-child) {
+            padding-bottom: 0;
+        }
     }
 
     .section__body > .grid {
@@ -61,6 +65,18 @@
                 &-white {}
             }
         }
+
+        form {
+            width: 100%;
+
+            ._btn {
+                width: 100%;
+            }
+
+            .quantity {
+                display: none;
+            }
+        }
     }
 
     // .single-product__price
@@ -78,6 +94,7 @@
             gap: 16px;
         }
 
+        &:not(:has(del)) .amount,
         ins {
             font-size: 28px;
             font-weight: 700;
@@ -134,11 +151,12 @@
                 height: auto;
                 border-radius: 16px;
                 overflow: hidden;
+                max-height: 570px;
 
                 img,
                 picture {
                     height: 100%;
-                    object-fit: contain;
+                    object-fit: cover;
                 }
             }
         }
@@ -176,8 +194,14 @@
                     object-fit: contain;
                 }
             }
+
+            &:has(.swiper-slide:only-child) {
+                display: none;
+            }
         }
     }
+
+
 }
 
 ._chars {
@@ -294,7 +318,27 @@
 
     // .product-descr__cahrs
 
-    &__cahrs {}
+    &__cahrs {
+
+        @media (max-width:768px) {
+            ._chars li {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+
+                & > :last-child {
+                    font-weight: 600;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #bcbcbc;
+                }
+            }
+        }
+    }
 
     // .product-descr__docs
 
@@ -322,8 +366,6 @@
     }
 }
 
-
-
 ._more-text {
     margin-top: 32px;
     font-size: 15px;
@@ -337,5 +379,11 @@
         &:hover {
             color: $accent;
         }
+    }
+}
+
+.related {
+    .swiper-slide {
+        height: auto;
     }
 }

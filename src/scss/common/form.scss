@@ -41,7 +41,15 @@
             }
         }
 
-        textarea {}
+        &._error {
+
+            input,
+            input::placeholder,
+            textarea,
+            textarea::placeholder {
+                color: red;
+            }
+        }
     }
 
     // .form__checkbox
@@ -155,9 +163,20 @@
         color: #BCBCBC;
         font-size: 13px;
         line-height: 145%;
+        display: block;
 
-        @media (max-width:768px){
+        @media (max-width:768px) {
             font-size: 11px;
+        }
+
+        a {
+            color: $accent;
+        }
+    }
+
+    label {
+        a {
+            color: $accent;
         }
     }
 

@@ -256,6 +256,7 @@
             border-bottom: 1px solid #ededed;
         }
 
+
         h4 {
             margin-bottom: 16px;
             font-size: 15px;
@@ -266,6 +267,26 @@
                 margin-bottom: 12px;
                 font-size: 14px;
             }
+        }
+
+        &:has(._more-text) .grid {
+            max-height: 135px;
+            overflow: hidden;
+
+            @media (max-width:1024px) {
+                max-height: 125px;
+            }
+
+            &._active {
+                max-height: none;
+            }
+        }
+
+        ._more-text {
+            width: fit-content;
+            display: block;
+            cursor: pointer;
+            margin-top: 10px;
         }
 
         label {
@@ -401,6 +422,7 @@
         gap: 8px;
 
         user-select: none;
+        white-space: nowrap;
 
         img,
         svg {
@@ -416,7 +438,9 @@
     &-filters__item {}
 
     .reset-filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $accent;
-        display: none;
     }
 }

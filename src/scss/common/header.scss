@@ -50,8 +50,8 @@
         display: block;
         position: relative;
         margin-left: 4px;
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         border-radius: 4px;
         background-color: $accent;
 
@@ -338,6 +338,7 @@
         justify-content: center;
         border-radius: 6px;
         background-color: #F2F2F2;
+        position: relative;
 
         img,
         svg {
@@ -345,6 +346,30 @@
             fill: $black;
             width: 18px;
             height: 18px;
+        }
+    }
+
+    [data-cart-count] {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        font-size: 12px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: $accent;
+
+        transform: translate(25%, -25%);
+
+        @media (max-width:768px) {
+            width: 14px;
+            height: 14px;
+            font-size: 10px;
         }
     }
 }
