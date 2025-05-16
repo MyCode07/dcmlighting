@@ -260,18 +260,20 @@
 
     &-items {
         @media (min-width:769px) {
-            border-radius: 16px;
-            background-color: #F6F6F6;
-            height: fit-content;
+            // border-radius: 16px;
+            // background-color: $bgc; 
+            // height: fit-content;
         }
     }
 
     // .order-item
 
     &-item {
-        border-radius: 16px 16px 0 0;
-        background-color: #F6F6F6;
+        border-radius: 16px;
+        // border-radius: 16px 16px 0 0;
+        background-color: $bgc;
         padding: 16px;
+
 
         @media (min-width:769px) {
             &:not(:first-child) {
@@ -1319,4 +1321,41 @@
 
 .cta-try .cta-img {
     height: auto;
+}
+
+
+.cats,
+.dsm,
+.cta,
+.cases,
+.advantages,
+.products {
+    display: none;
+}
+
+
+.order {
+    position: relative;
+}
+
+.order-items {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.order-item {
+    &:not(:first-child) {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        z-index: 1;
+        width: 100%;
+        transform: translateY(calc(var(--order) * 100vh));
+    }
 }

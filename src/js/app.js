@@ -7,7 +7,9 @@ import "./parts/show-more.js";
 import { accorden } from "./static/accordeon.js";
 import { runTicker } from "./static/ticker.js";
 import { Fancybox } from "@fancyapps/ui";
+import { animateOrder } from "./parts/animations.js";
 
+animateOrder();
 accorden();
 runTicker()
 
