@@ -5,6 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export const animateOrder = () => {
+    if (window.innerWidth <= 768) return;
+
     const supportLines = gsap.utils.toArray(".order-item");
     const order = document.querySelector('.order');
 
@@ -53,9 +55,8 @@ export const animateOrder = () => {
     //     })
     // }
 
-
-
-
+    let top = document.querySelector('.header').getBoundingClientRect().height;
+    top += 50
 
     supportLines.forEach((text, i) => {
         let tl = gsap.timeline({
@@ -74,9 +75,9 @@ export const animateOrder = () => {
     ScrollTrigger.create({
         trigger: "section.order",
         scrub: true,
-        markers: true,
+        // markers: true,
         pin: true,
-        start: () => "top top",
+        start: () => `top ${top}`,
         end: () => "+=" + ((supportLines.length + 1) * window.innerHeight),
         invalidateOnRefresh: true,
     });

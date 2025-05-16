@@ -19,9 +19,6 @@
 // load dhx
 // @import "parts/dhx-suite.min";
 
-// load animations
-@import "common/animations";
-
 // load common
 @import "common/common";
 
@@ -79,6 +76,8 @@
 // load woo
 @import "parts/woo";
 
+// load animations
+@import "common/animations";
 
 .pages {
     position: fixed;
