@@ -172,11 +172,7 @@
     }
 }
 
-@media (min-width:769px) {
-    body:has(header._sticky) .search {
-        top: 56px;
-    }
-}
+
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,

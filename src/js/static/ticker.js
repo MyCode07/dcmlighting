@@ -23,13 +23,16 @@ function scroll(target, options, reverse) {
 }
 
 export const runTicker = () => {
+    const ticker = document.querySelector('._ticker');
     const tickers = document.querySelectorAll('._ticker-text');
+
+    let time = ticker.dataset.speed ?? 20
 
     if (!tickers.length) return
 
     tickers.forEach(line => {
         let direction = 1;
-        const roll = scroll(line, { duration: 20 })
+        const roll = scroll(line, { duration: time })
 
         // if (!isMobile.any())
         //     ScrollTrigger.create({
