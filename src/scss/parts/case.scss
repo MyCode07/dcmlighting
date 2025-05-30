@@ -166,11 +166,17 @@
     &-images {
         flex: 1 1 auto;
 
+        iframe,
         img,
         picture {
+            width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+        }
+
+        .swiper-slide {
+            max-height: 570px;
         }
     }
 

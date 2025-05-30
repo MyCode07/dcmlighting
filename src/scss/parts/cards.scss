@@ -142,6 +142,12 @@
             height: 100%;
             object-fit: cover;
         }
+
+        @media (any-hover: hover) {
+            &:hover + h4 {
+                color: $accent_hover;
+            }
+        }
     }
 
     h4 {
@@ -151,6 +157,14 @@
         display: block;
         margin-bottom: 8px;
         flex: 1 1 auto;
+
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent_hover;
+            }
+        }
 
 
         @media (max-width:768px) {

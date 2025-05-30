@@ -402,11 +402,19 @@ button.next {
         align-items: center;
         justify-content: center;
 
+        transition: background-color 0.3s ease 0s;
+
         img,
         svg {
             width: 20px;
             flex: 0 0 auto;
             fill: $white;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent_hover
+            }
         }
     }
 
@@ -662,6 +670,8 @@ button.next {
     }
 
     ul {
+        padding-left: 0.25em;
+
         & > :not(:last-child) {
             margin-bottom: 1em;
         }
@@ -721,6 +731,7 @@ button.next {
         }
     }
 }
+
 
 ul.page-numbers {
     margin-inline: auto;

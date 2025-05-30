@@ -26,9 +26,9 @@ export const runTicker = () => {
     const ticker = document.querySelector('._ticker');
     const tickers = document.querySelectorAll('._ticker-text');
 
-    let time = ticker.dataset.speed ?? 20
+    if (!ticker) return;
 
-    if (!tickers.length) return
+    let time = ticker.dataset.speed ?? 20
 
     tickers.forEach(line => {
         let direction = 1;
