@@ -735,7 +735,7 @@ button.next {
 
 ul.page-numbers {
     margin-inline: auto;
-    margin-top: 32px;
+    margin-top: 64px;
     width: 100%;
 
     display: flex;
@@ -745,6 +745,7 @@ ul.page-numbers {
     gap: 8px;
 
     @media (max-width:768px) {
+        margin-top: 32px;
         gap: 4px;
     }
 
@@ -758,15 +759,20 @@ ul.page-numbers {
         align-items: center;
         justify-content: center;
         text-align: center;
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
 
         transition: all 0.3s ease 0s;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 120%;
+        background-color: $bgc;
 
         @media (max-width:768px) {
             width: 36px;
             height: 36px;
+            font-size: 12px;
         }
 
         img,
@@ -774,6 +780,12 @@ ul.page-numbers {
             width: 50%;
             fill: $black;
             flex: 0 0 auto;
+        }
+
+        &.prev,
+        &.next {
+            width: fit-content;
+            padding-inline: 1em;
         }
     }
 
@@ -788,20 +800,5 @@ ul.page-numbers {
     span {
         background-color: $bgc;
     }
-
-    .next,
-    .prev {
-        background-color: $accent;
-
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $accent_hover;
-            }
-        }
-    }
-
-
-    @media (max-width:768px) {
-        margin-top: 24px;
-    }
+   
 }
