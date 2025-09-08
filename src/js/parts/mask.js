@@ -1,14 +1,13 @@
 import { maskInputs } from "../static/inputmask.js";
 
-document.addEventListener('DOMContentLoaded', function () {
+const phones = document.querySelectorAll('.phone-input-wrapper');
+phones.forEach(phone => {
 
-    const countrySelect = document.getElementById('country-select');
+    const countrySelect = phone.querySelector('.country-select');
     const selectedCountry = countrySelect.querySelector('.selected-country');
     const countryDropdown = countrySelect.querySelector('.country-dropdown');
-    const phoneInput = document.getElementById('phone');
-    const validationMessage = document.getElementById('validation-message');
-    const submitBtn = document.getElementById('submit-btn');
-    const result = document.getElementById('result');
+    const phoneInput = phone.querySelector('input');
+    const submitBtn = phone.closest('form').querySelector('button');
 
     let currentCountry = {
         code: '+7',
@@ -17,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         name: 'Россия'
     };
 
-    maskInputs('+7 (999) 999-99-99', '.phone-input')
-
+    maskInputs(currentCountry.mask, '.phone-input')
 
     // Показ/скрытие выпадающего списка стран
     selectedCountry.addEventListener('click', function () {
@@ -45,9 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Очищаем поле ввода при смене страны
             phoneInput.value = '';
-            validationMessage.textContent = '';
-            validationMessage.className = 'validation-message';
-            result.style.display = 'none';
 
             maskInputs(this.getAttribute('data-mask'), '.phone-input')
         });
@@ -61,51 +56,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // Валидация номера телефона
-    function validatePhone() {
-        const numbers = phoneInput.value.replace(/\D/g, '');
-        const expectedLength = currentCountry.mask.match(/9/g).length;
-
-        console.log('expectedLength', expectedLength);
-
-
-        if (numbers.length === 0) {
-            validationMessage.textContent = 'Введите номер телефона';
-            validationMessage.className = 'validation-message invalid';
-            return false;
-        } else if (numbers.length < expectedLength) {
-            validationMessage.textContent = `Номер слишком короткий. Ожидается ${expectedLength} цифр`;
-            validationMessage.className = 'validation-message invalid';
-            return false;
-        } else if (numbers.length > expectedLength) {
-            validationMessage.textContent = `Номер слишком длинный. Ожидается ${expectedLength} цифр`;
-            validationMessage.className = 'validation-message invalid';
-            return false;
-        } else {
-            validationMessage.textContent = '✓ Номер телефона корректен';
-            validationMessage.className = 'validation-message valid';
-            return true;
-        }
-
-        if (/[_]/.test(input.value) || input.value.length < 18) {
-            formAddError(input);
-            error++;
-        }
-    }
 
     // Обработка отправки формы
     submitBtn.addEventListener('click', function () {
-        if (validatePhone()) {
+        if (validatePhone(phoneInput, currentCountry)) {
             const numbers = phoneInput.value.replace(/\D/g, '');
-
-            document.getElementById('result-number').textContent = currentCountry.code + ' ' + numbers;
-            document.getElementById('result-country').textContent = currentCountry.name;
-            document.getElementById('result-code').textContent = currentCountry.code;
-
-            result.style.display = 'block';
         }
     });
 
     // Инициализация
     phoneInput.placeholder = currentCountry.mask;
-});
+})
+
+
+// Валидация номера телефона
+function validatePhone(phoneInput, currentCountry) {
+    const numbers = phoneInput.value.replace(/\D/g, '');
+    const expectedLength = currentCountry.mask.match(/9/g).length;
+
+    console.log('expectedLength', expectedLength);
+
+    if (numbers.length === 0) {
+        console.log('Введите номер телефона');
+        return false;
+    } else if (numbers.length < expectedLength) {
+        console.log(`Номер слишком короткий. Ожидается ${expectedLength} цифр`);
+        return false;
+    } else if (numbers.length > expectedLength) {
+        console.log(`Номер слишком длинный. Ожидается ${expectedLength} цифр`);
+        return false;
+    } else {
+        console.log('✓ Номер телефона корректен');
+        return true;
+    }
+
+    // ,,,,
+    if (/[_]/.test(input.value) || input.value.length < 18) {
+        formAddError(input);
+        error++;
+    }
+}

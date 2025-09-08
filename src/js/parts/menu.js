@@ -28,7 +28,7 @@ document.addEventListener('click', function (e) {
         searchPopup.classList.remove('_open');
     }
 
-    if (!targetEl.hasAttribute('data-open-search') && !targetEl.closest('.search') && searchPopup.classList.contains('_open')) {
+    if (!targetEl.hasAttribute('data-open-search') && !targetEl.closest('.search') && searchPopup && searchPopup.classList.contains('_open')) {
         searchPopup.classList.remove('_open');
     }
 })
